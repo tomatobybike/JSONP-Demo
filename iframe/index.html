@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script src="jquery-1.12.4.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+    <script type="text/javascript">
+      function get_jsonp() {
+				// 
+        $.getJSON('http://127.0.0.1:10011?callback=?', function (data) {
+          $('#result').val('My name is: ' + data.name)
+        })
+      }
+    </script>
+    <a href="javascript:get_jsonp();">Click me</a><br />
+    <textarea id="result" cols="50" rows="3"></textarea>
+  </body>
+</html>
